@@ -1,0 +1,78 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+h1 {
+    border-bottom: 1px solid black; 
+}
+
+h1, h2 {
+    color: grey;
+}
+
+p {
+    color: maroon;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+em {
+    font-family: serif;
+}
+
+p.green-tea {
+    color: green;
+}
+
+p.razz {
+    color: red;
+}
+
+p.blue-berry {
+    color: blue;
+}
+
+p.cranberry {
+    color: darkred;
+}
+
+div p {
+    color: purple;
+}
+
+ul > li {
+    color: orange;
+}
+
+ul > ul > li {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 + p {
+    color: teal;
+}
+
+input[type="text"] {
+    border: 2px solid blue;
+} 
+
+a:hover {
+    color: black;
+}
+
+img {
+    height: 300px;
+    height: 300px;
+}
+
+#unique {
+    font-size: 20px;
+    color: red;
+}
