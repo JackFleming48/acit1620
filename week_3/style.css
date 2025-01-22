@@ -1,0 +1,119 @@
+/* div {
+    border: 1px solid red;
+} */
+
+body {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#frankie img {
+    height: 150px;
+}
+
+#name-wrapper {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+a:hover {
+    color: blue;
+}
+
+.nav-wrapper li {
+    display: inline;
+    margin: 5px;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
+    color: black;
+    border-right: 1px solid black;
+    padding-right: 15px;
+}
+
+.nav-wrapper li:first-child {
+    border-left: 1px solid black;
+    padding-left: 15px
+}
+
+.nav-wrapper a:hover {
+    color: blue
+}
+
+#about-me-wrapper {
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(99, 99, 99, 0.3);
+    width: auto;
+    height: auto;
+}
+
+#about-me-wrapper > p {
+    padding: 20px;
+    line-height: 1.5em;
+}
+
+#my-skills, #my-projects {
+    background-color: rgba(99, 99, 99, 0.3);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+#my-projects {
+    border: 4px dotted black;
+}
+
+#my-projects ul {
+    list-style-type: none;
+}
+
+#my-projects li {
+    padding-top: 4px;
+}
+
+#my-skills {
+    border: 4px dashed black;
+}
+
+footer {
+    color: white;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+footer a {
+    color: white;
+}
+
+footer > div {
+    margin: 5px;
+    padding: 5px;
+}
+
+#footer-wrapper ul {
+    list-style-type: none;
+}
+
