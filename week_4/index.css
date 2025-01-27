@@ -1,0 +1,31 @@
+/* Flex Container */
+.flex-container {
+    /* Activate Flexbox */
+    display: flex; 
+    /* Items are placed in a row */
+    flex-direction: row; 
+    /* Distribute Items with space around them */
+    justify-content: space-around;
+
+    align-items: center;
+    /* gap: 20px; */
+    border: 1px solid red;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Flex items */
+.flex-item {
+    /* Each Item Grows Equally */
+    flex: 1; 
+    /* Minimum Width for Responsiveness */
+    min-width: 100px;
+    /* Max Width for Responsiveness */
+    max-width: 200px;
+    border: 1px solid red;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    /* x-offset, y-offset, blur-radius */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
