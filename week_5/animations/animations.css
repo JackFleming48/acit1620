@@ -1,0 +1,71 @@
+div {
+    border: 1px solid red;
+}
+
+#test {
+    animation-name: slidein;
+    animation-duration: 3s;
+}
+
+@keyframes slidein {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0, 0;
+        scale: 100% 1
+    }
+}
+
+#rotate {
+    animation-name: rotate;
+    animation-duration: 5s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(1080deg);
+
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+#skew {
+    animation-name: skew-rotate;
+    animation-duration: 3s;
+}
+
+@keyframes skew-rotate {
+    from {
+        transform: skew(1080deg);
+    }
+
+    to {
+        transform: skew(0deg)
+    }
+}
+
+#grow-shrink {
+    display: flex;
+    animation-name: grow-shrink;
+    animation-duration: 3s;
+}
+
+@keyframes grow-shrink {
+    25%,
+    75% {
+        scale: 100%
+    }
+
+    0%,
+    50% {
+        scale: 200%;
+        color: magenta;
+    }
+}
+
