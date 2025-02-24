@@ -1,0 +1,89 @@
+@media screen and (max-width) {
+    .main-wrap {
+        display: inline-block;
+    }
+    
+    nav {
+        display: inline-block;
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 30px;
+}
+
+.main-wrap {
+    display: flex;
+}
+
+
+img {
+    width: 200px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+}
+
+aside {
+    width: 10%;
+    padding-right: 20px;
+}
+
+nav > ul {
+    list-style: none;
+    text-align: right;
+}
+
+ul > li {
+    padding: 10px;
+}
+    
+li > a {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+form {
+    border: 1px solid darkcyan;
+    padding: 5px;
+    padding-right: 10px;
+    min-width: 85vw;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: darkcyan;
+    text-align: center;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form button {
+    display: block;
+    padding: 0.5rem 1rem;
+    background: hsl(120, 56%, 40%);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 5rem;
+    margin-left: auto;
+}
+
+
+ 
