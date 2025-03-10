@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    margin-top: 10%;
+}
+
+header {
+    text-align: center;
+}
+
+header > img {
+    height: auto;
+    width: 15%;
+}
+
+#wrapper {
+    margin-top: 10px;
+    text-align: center;
+    height: auto;
+    height: 250px;
+}
+
+#openai_prompt::placeholder {
+    font-size: 32px;
+}
+
+#openai_prompt {
+    width: 50%;
+    resize: none;
+    overflow-wrap: break-word;
+    height: 230px;
+}
+
