@@ -1,0 +1,43 @@
+:root {
+    --gray: #4b4b4b;
+    --black: #000000;
+    --button-hover: #757575;
+}
+
+html {
+    background-color: var(--gray);
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+/* #form-wrap {
+} */
+
+form {
+    margin-left: 40%;
+    margin-right: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 20%;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    transition: 200ms ease-in;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
