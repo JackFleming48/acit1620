@@ -38,6 +38,19 @@ const shuffle = (list) => {
 
 /*Your code goes here for step 1*/
 
+let img_arr = [
+    "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg", 
+    "https://i.ibb.co/g3tqj4w/fruit-zxcv.jpg",
+    "https://i.ibb.co/88Hy4rD/fruit-wert.jpg",
+    "https://i.ibb.co/NmNMLKF/fruit-astt.jpg",
+    "https://i.ibb.co/qp8Q1G6/fruit-dfgh.jpg",
+    "https://i.ibb.co/9thfVhB/fruit-hjkl.jpg",
+    "https://i.ibb.co/YtTfqvD/fruit-dcnj.jpg",
+    "https://i.ibb.co/CVwKM8Z/fruit-ecuh.jpg",
+    "https://i.ibb.co/ccNyKX0/fruit-uzxc.jpg" 
+]
+
+let randomUrls = shuffle(img_arr)
 
 
 /*
@@ -57,6 +70,7 @@ querySelectorAll will be covered in the next class.
 */
 
 const images = document.querySelectorAll('.card img');
+
     
 /*
     Step 2:
@@ -84,6 +98,12 @@ const images = document.querySelectorAll('.card img');
 
 
 
+
+for (let i=0; i < images.length; i++) {
+    images[i].src = randomUrls[i]
+}
+
+console.log(randomUrls)
 
 const h1 = document.querySelector('h1');
 h1.append("!")

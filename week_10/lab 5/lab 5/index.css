@@ -33,6 +33,7 @@ h1 {
 .card img {
     opacity: 0;
     border-radius: 15px;
+    transition: opacity 500ms ease;
 }
 
 /* 
@@ -46,19 +47,11 @@ h1 {
 
 /* Your code goes here for step 1 */
 
-.card {
-    margin: 10px;
-    width: 200px;
-    height: 200px;
-}
-
-.card:hover img {
-    opacity: 1;
-}
-
 #game {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 128px 128px 128px;
+    grid-template-rows: 128px 128px 128px;
+    grid-gap: 16px;
 }
 /*  
     2. Each image must transition from opacity: 
@@ -68,3 +61,7 @@ h1 {
 */
 
 /* Your code goes here for step 2 */
+
+.card:hover img {
+    opacity: 1;
+}
