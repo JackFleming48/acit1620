@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="zero" src="images/zeroblur.jpg" alt="no_blur">
+    <img id="one" src="images/oneblur.jpg" alt="no_blur">
+    <img id="two" src="images/twoblur.jpg" alt="no_blur">
+    <img id="three" src="images/threeblur.jpg" alt="no_blur">
+    <img id="four" src="images/fourblur.jpg" alt="no_blur">
+    <img id="five" src="images/fiveblur.jpg" alt="no_blur">
+    <script>
+        window.onload = init;
+
+        function init() {
+            let images = document.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].onclick = showAnswer;
+
+            }
+        }
+
+        function reblur(e) {
+            let image = e.target;
+            let name = image.id;
+            name = "images/" + name + "blur.jpg";
+            image.src = name;
+        }
+
+        function showAnswer(e) {
+            let image = e.target;
+            let name = image.id;
+            name = "images/" + name + ".jpg";
+            image.src = name;
+            setTimeout(() => reblur(e), 200);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #profile {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: fit-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        #skills span {
+            display: inline-block;
+
+        }
+
+        #skills {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile"></div>
+    <script>
+        const userData = {
+            "name": "Alice",
+            "age": 28,
+            "email": "alice@gmail.com",
+            "isStudent": false,
+            "skills": ["HTML", "CSS", "JS"],
+            "address": {
+                "city": "Toronto",
+                "postal": "g2g1op"
+            }
+        };
+
+        function displayUserProfile(data) {
+            const profileDiv = document.getElementById("profile");
+
+            profileDiv.innerHTML =
+            `<h2>${data.name}</h2>
+            <p><strong>Age:</strong>${data.age}</p>
+            <p><strong>Email:</strong>${data.email}</p>
+            <p><strong>City:</strong>${data.address.city}</p>
+            <p><strong>Student:</strong>${data.isStudent? "Yes" : "No"}</p>
+            <div id="skills">
+            <p><strong>Skills:</strong>${data.skills.map(skill => `<span>${skill}</span`).join(', ')}</p>
+            </div>`;
+        }
+
+        displayUserProfile(userData)
+    </script>
+</body>
+</html>

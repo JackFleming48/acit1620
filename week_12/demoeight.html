@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Creating an object from a JSON string</h2>
+    <p id="convert"></p>
+    <p id="str"></p>
+    <script>
+        const text = '{"name": "John", "age": 30}';
+        const obj = JSON.parse(text);
+        document.getElementById("convert").innerHTML = 
+        obj.name + ", " + obj.age;
+        const myJSON = JSON.stringify(obj);
+        document.getElementById("str").innerHTML =
+        myJSON.name + ", " + myJSON.age;
+    </script>
+</body>
+</html>

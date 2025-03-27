@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img id="zero" src="images/zeroblur.jpg" alt="no_blur">
+    <script>
+        window.onload = init;
+
+        function init() {
+            let image = document.getElementById("zero");
+            image.onclick = showAnswer;
+        }
+
+        function showAnswer() {
+            let image = document.getElementById("zero");
+
+            if (image.src.includes("zeroblur.jpg")) {
+                image.src = "images/zero.jpg"
+            } else {
+                image.src = "images/zeroblur.jpg"
+            }
+        }
+
+    </script>
+</body>
+</html>
