@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="create-set-popup">
+        <form action="">
+
+            <h2>Create a new set of flashcards</h2>
+
+            <div class="form-item">
+                <label for="name">Question</label>
+                <input type="text" placeholder="New set name." name="setname" id="create-name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="desc">Answer</label>
+                <input type="text" placeholder="Description of what will be in this set." name="desc" id="create-desc" required>
+            </div>
+
+            <button type="submit" class="blue-green-button" id="set-create">Add card</button>
+            <button type="button" class="close-button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+</body>
+</html>

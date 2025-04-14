@@ -1,0 +1,309 @@
+:root {
+    --blue: #00205b;
+    --green: #00843d;
+    --dark_blue: #041C2C;    
+    --gray: #99999A;
+    --red: #e45959;
+}
+
+html {
+    background-color: var(--blue);
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+header {
+    margin: 10px;
+    background-color: var(--green);
+    border-radius: 15px;
+}
+
+#main-header {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-heading {
+    height: 100px;
+    text-align: center;
+}
+
+#top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50px;
+    background-color: white;
+}
+
+#bottom {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 50px;
+    background-color: white;
+}
+
+#main-nav {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: 0;
+}
+
+#main-nav-links {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}   
+
+#main-nav-links li {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    list-style: none;
+}
+
+#main-nav-links li:hover {
+    border-radius: 10px;
+    background-color: var(--gray);
+}
+
+#main-nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+#main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+
+#content-wrap-left {
+    width: auto;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 15px;
+    
+}
+
+#content-wrap-left h2 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 1px solid black;
+}
+
+#content-wrap-right {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 500px;
+    background-color: white;
+    color: black;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+
+.blue-green-button {
+    width: 100px;
+    height: 25px;
+    border: 3px solid var(--green);
+    align-self: flex-end;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    margin: 10px 10px 5px 0;  
+    transition: 200ms ease-in;
+}
+
+.blue-green-button:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+.close-button {
+    width: 100px;
+    height: 25px;
+    align-self: flex-end;
+    transition: 200ms ease-in;
+    background-color: white;
+    border: 3px solid rgb(255, 87, 87);
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: rgb(255, 87, 87);
+    color: white;
+}
+
+#content-wrap-right h2 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 1px solid black;
+}
+
+/* Start css for displaying each flashcard set */
+
+.display-current-cards {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 10px;
+    display: none;
+    justify-content: flex-end;
+    transition: 100ms ease-in;
+}
+
+.display-current-cards:hover {
+    background-color: var(--gray);
+}
+
+.display-current-cards button {
+    margin-left: auto;
+}
+
+.display-current-cards span {
+    margin-left: 20px;
+}
+
+/* Start css for create new flashcard set form */
+
+#overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+}
+
+#create-set-popup {
+    width: 33%;
+    display: none;
+    position: fixed;
+    bottom: 33%;
+    right: 33%;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    z-index: 10;
+}
+
+#create-set-popup form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.form-item {
+    display: inherit;
+    flex-direction: inherit;
+    margin-bottom: 20px;
+    /* margin-left: inherit;
+    margin-right: inherit; */
+}
+
+.form-item label {
+    margin-bottom: 5px;
+}
+
+form > * {
+    margin-bottom: 10px;
+}
+
+#create-set-popup h2 {
+    text-align: center;
+}
+
+#create-set-popup form > .blue-green-button, .close-button {
+    margin: 0px 10px 5px 0;
+}
+
+/* Start CSS for adding new cards to a set of flashcards */
+
+#create-card-popup {
+    width: 33%;
+    display: none;
+    position: fixed;
+    bottom: 33%;
+    right: 33%;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    z-index: 10;
+}
+
+#create-card-popup form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Start CSS to dipslay the selected set of flashcards */
+
+#displayed-set {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#displayed-set-answer {
+    margin-top: 40px;
+    display: none;
+}
+
+#card-control {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#displayed-set{
+    display: none;
+    text-align: center;
+    background-color: var(--gray);
+    padding: 20px;
+    width: 50%;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#back-button {
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    background-color: var(--red);
+    border: none;
+    transition: 200ms ease-in;
+    border-radius: 5px;
+}
+
+#back-button:hover {
+    background-color: #bd4545;   
+}
+
+#show-answer {
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    background-color: #72bd17;
+    border: none;
+    transition: 200ms ease-in;
+    border-radius: 5px;
+}
+
+#show-answer:hover{
+    background-color: #61a213;
+}

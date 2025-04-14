@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Site</title>
+</head>
+<body>
+    <header id="main-header">
+        <div id="top"></div>
+        <h1 id="main-heading">Flash Cards</h1>
+        <div id="bottom">
+        </div>
+    </header>
+    <div id="main-content">
+        <div id="content-wrap-left">
+            <h2>Created Sets</h2>
+            <div id="current-cards">
+                <div class="display-current-cards" >
+                    <span class="set-name"></span>
+                    <span class="set-desc"></span>
+                    <button type="submit" class="blue-green-button" id="add-cards">Add Cards</button>
+                </div>
+            </div>
+        </div>
+        <div id="content-wrap-right">
+            <button class="blue-green-button" onclick="openForm()">Add set</button>
+            <div id="current-display">
+                <h2>Study</h2>
+                <div id="displayed-set">
+                    <h3 id="displayed-set-question"></h3>
+                    <p id="displayed-set-answer"></p>
+                    <div id="card-control">
+                        <button id="back-button">Back</button>
+                        <button id="show-answer">Show Answer</button>
+                        <button class="blue-green-button">Next Card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="create-set-popup">
+        <form action="">
+
+            <h2>Create a new set of flashcards</h2>
+
+            <div class="form-item">
+                <label for="name">Name</label>
+                <input type="text" placeholder="New set name." name="setname" id="create-name" required>
+            </div>
+
+            <div class="form-item">
+                <label for="desc">Description</label>
+                <input type="text" placeholder="Description of what will be in this set." name="desc" id="create-desc" required>
+            </div>
+
+            <button type="submit" class="blue-green-button" id="set-create">Create set</button>
+            <button type="button" class="close-button" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <div id="create-card-popup">
+        <form action="">
+            <h2>Add a flashcard to the Set</h2>
+
+            <div class="form-item">
+                <label for="Question">Question</label>
+                <input type="text" placeholder="Question" name="question" id="add-question" required>
+            </div>
+
+            <div class="form-item">
+                <label for="answer">Answer</label>
+                <input type="text" placeholder="Answer to question" name="answer" id="add-answer" required>
+            </div>
+
+            <button type="button" class="blue-green-button" id="card-create">Add card</button>
+            <button type="button" class="close-button" onclick="closeCreate()">Cancel</button>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
